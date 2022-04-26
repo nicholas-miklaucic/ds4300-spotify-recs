@@ -1,0 +1,19 @@
+.url {
+  background-color: hsl(0, 0%, 21%);
+  font-family: monospace;
+  color: hsl(0, 0%, 71%);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+p.url {
+  margin: 1rem;
+}
+
+.openspot {
+  color: hsl(171, 100%, 41%);
+}
+
+.newspot {
+  color: hsl(48, 100%, 67%);
+}

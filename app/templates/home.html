@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<section class="hero is-link">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column has-text-centered is-half">
+        <h2 class="subtitle is-2">Spotify Playlist Recommendations</h2>
+        <div class="content is-medium">
+          <p>
+            Insert Name Here lets you get new song recommendations for a Spotify
+            playlist. It tries to find songs that are similar to the ones
+            already in your playlist, so it might help you find a new artist.
+          </p>
+          <p>
+            To get recs for a playlist, simply go to
+            <a href="open.spotify.com">Spotify</a> and find a playlist. The
+            playlist URL will look something like this:
+          </p>
+          <p class="url">
+            https://<span class="openspot">open.spotify.com</span
+            >/playlist/4EW8ZodwjjPIEJQ2FZZH5H
+          </p>
+          Replace
+          <span class="url openspot">open.spotify.com</span>
+          with
+          <span class="url newspot">spotifyrecs.ml</span>
+          to get
+          <p class="url">
+            https://<span class="newspot">spotifyrecs.ml</span
+            >/playlist/4EW8ZodwjjPIEJQ2FZZH5H
+          </p>
+          and voila! Start exploring!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
