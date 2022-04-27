@@ -1,11 +1,18 @@
 .DS_Store
-.idea
-*.log
-tmp/
 
-*.py[cod]
-*.egg
-build
-htmlcov
+venv/
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
 
 set_env
