@@ -1,1 +1,1 @@
-python -m flask run
+flask run
