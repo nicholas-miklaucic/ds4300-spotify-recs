@@ -48,7 +48,7 @@ def get_feats(mu, sd):
         ):
             query[feat_name] = {"$gt": m - 1 * s, "$lt": m + 1 * s}
 
-        with tqdm(songs.find(query, limit=1000)) as docs:
+        with tqdm(songs.find(query, limit=5000)) as docs:
             for doc in docs:
                 all_feats.append(
                     np.array(
