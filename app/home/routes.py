@@ -33,7 +33,6 @@ def recs(playlist_id):
         new_url = curr[0:25] + "embed/" + curr[25:]
         song_urls.append(new_url)
 
-    print(songs)
     return render_template("results.html", data=song_urls, title="Results")
     """
     mu, sd = playlist_data(playlist_id)
