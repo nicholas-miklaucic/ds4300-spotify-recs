@@ -48,9 +48,7 @@ def get_feats(mu, sd):
         ):
             query[feat_name] = {"$gt": m - 1 * s, "$lt": m + 1 * s}
 
-        print(query)
-
-        with tqdm(songs.find(query), total=songs.estimated_document_count(),) as docs:
+        with tqdm(songs.find(query, limit=1000)) as docs:
             for doc in docs:
                 all_feats.append(
                     np.array(
@@ -63,6 +61,7 @@ def get_feats(mu, sd):
                 all_ids.append(doc["id"])
 
         g.feats = (np.array(all_feats), np.array(all_ids))
+        print(g.feats[0].shape)
 
     return g.feats
 
@@ -75,5 +74,4 @@ def close_db(e=None):
 
 
 def init_app(app: Flask):
-    app.before_first_request(get_feats)
     app.teardown_appcontext(close_db)

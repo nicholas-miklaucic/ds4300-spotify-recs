@@ -1,17 +1,18 @@
 {% extends "base.html" %} {% block content %}
-<section class="hero is-link">
-  <div class="hero-body">
-    <div class="columns is-centered">
-      <div class="column has-text-centered is-half">
-        <h2 class="subtitle is-2">Spotify Rec Engine</h2>
-        <div class="content is-medium" style="height: 300px; overflow: scroll">
-            {% for element in data %}
-            <div>
-                <iframe src="https://open.spotify.com/embed/track/5YS3QDraH2wWk9mx8Ec04l" width="650" height="380" frameborder="0" allowtransparency="true"></iframe>
-            </div>
-            {% endfor %}
-        </div>
-      </div>
+<!-- prettier-ignore -->
+<section class="section">
+  <div class="columns is-centered">
+    <div class="column has-text-centered is-half">
+      <h2 class="subtitle is-2">Spotify Rec Engine</h2>
+        {% for element in data %}
+          <iframe
+            src={{ element }}
+            width="100%"
+            height="80"
+            frameborder="0"
+            allowtransparency="true"
+          ></iframe>
+        {% endfor %}
     </div>
   </div>
 </section>
